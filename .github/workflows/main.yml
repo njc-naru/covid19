@@ -31,4 +31,4 @@ jobs:
         git config --global user.email "you@example.com"
         git config --global user.name "njc-naru"
         git merge -X theirs --allow-unrelated-histories upstream/development
-        git push origin development
+        git push -f origin development
