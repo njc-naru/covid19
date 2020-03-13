@@ -22,8 +22,11 @@ jobs:
         persist-credentials: false
       
     - name: git remote add upstream
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git remote add upstream https://njc-naru:${GITHUB_TOKEN}@github.com/tokyo-metropolitan-gov/covid19.git
+        git remote set-url origin https://njc-naru:${GITHUB_TOKEN}@github.com/njc-naru/covid19.git
         git fetch upstream
         git config --global user.email "you@example.com"
         git config --global user.name "njc-naru"
