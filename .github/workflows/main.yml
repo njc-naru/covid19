@@ -31,4 +31,6 @@ jobs:
         git checkout -B originsite upstream/development
         git config --global user.email "you@example.com"
         git config --global user.name "njc-naru"
+        git rm .github
+        git commit -m ".githubを削除"
         git push -f origin originsite
