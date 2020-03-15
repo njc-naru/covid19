@@ -4,7 +4,7 @@ name: Merge from upstream and deploy
 # events but only for the master branch
 on:
   schedule:
-    - cron: '1/5 * * * *'
+    - cron: '1/3 * * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -31,6 +31,6 @@ jobs:
         git checkout -B originsite upstream/development
         git config --global user.email "you@example.com"
         git config --global user.name "njc-naru"
-        git rm .github
+        git rm -r .github
         git commit -m ".githubを削除"
         git push -f origin originsite
