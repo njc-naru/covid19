@@ -84,7 +84,7 @@ function readPatients() : array
 {
   $excelDir = __DIR__.'/downloads/patients.xlsx';
   $sheetName = 'Table 1';
-  $data = xlsxToArray($excelDir, $sheetName, 'A3:H100', 'A2:H2');
+  $data = xlsxToArray($excelDir, $sheetName, 'A3:H1013', 'A2:H2');
   return [
     'date' => xlsxToArray($excelDir, $sheetName, 'G1')[0][0], // データ更新日
     'data' => $data->filter(function ($row) {
@@ -105,7 +105,7 @@ function readPatients() : array
  * 日付ごとの小計リストに変換
  */
 function createSummary(array $patients) {
-  $dates = makeDateArray('2020-01-23');
+  $dates = makeDateArray('2020-01-14');
 
   return [
     'date' => $patients['date'],
