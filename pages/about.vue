@@ -6,9 +6,19 @@
     <TextCard>
       当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、奈良県内外の有志が開設したものです。<br />
       <br />
-      複製・改変が許されたオープンソースライセンスで公開されている、<a target="_blank" href="https://stopcovid19.metro.tokyo.lg.jp/">東京都公式新型コロナウイルス対策サイト</a>の<a target="_blank" href="https://github.com/tokyo-metropolitan-gov/covid19" rel="noopener">仕組み</a>を利用しています。<br />
-      <br />
-      奈良県による公式情報と客観的な数値をわかりやすく伝えることで、奈良県にお住まいの方や、奈良県内に拠点を持つ企業の方、奈良県を訪れる方が、現状を把握して適切な対策を取れるようにすることを目的としています。
+      複製・改変が許されたオープンソースライセンスで公開されている、
+      <a target="_blank" href="https://stopcovid19.metro.tokyo.lg.jp/">
+        東京都公式新型コロナウイルス対策サイト
+      </a>
+      の
+      <a
+        target="_blank"
+        href="https://github.com/tokyo-metropolitan-gov/covid19"
+        rel="noopener"
+      >
+        仕組み
+      </a>
+      を利用しています。
     </TextCard>
     <TextCard title="ブラウザ環境について">
       当サイトは以下の環境でご覧いただくことを推奨いたします。<br />
@@ -94,10 +104,10 @@
         >GitHub リポジトリ</a
       >をご確認ください。
     </TextCard>
-    <TextCard title="お問い合わせ先">
+    <!-- <TextCard title="お問い合わせ先">
       Code for Nara<br />
       <a href="mailto:info@code4nara.org">info@code4nara.org</a>
-    </TextCard>
+    </TextCard> -->
   </div>
 </template>
 

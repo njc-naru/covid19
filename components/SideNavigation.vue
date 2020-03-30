@@ -10,7 +10,7 @@
       </v-icon>
       <nuxt-link to="/" class="SideNavigation-HeadingLink">
         <div class="SideNavigation-Logo">
-          <img src="/logo.png" :alt="$t('Nara')" />
+          <img src="/logo.jpg" :alt="$t('Sakura')" />
         </div>
         <h1 class="SideNavigation-Heading">
           {{ $t('COVID-19') }}<br />{{ $t('Measures site') }}
@@ -39,7 +39,7 @@
       </v-list>
       <div class="SideNavigation-Footer">
         <div class="SideNavigation-SocialLinkContainer">
-          <a
+          <!-- <a
             href="https://twitter.com/narakencyou"
             target="_blank"
             rel="noopener"
@@ -59,9 +59,9 @@
             rel="noopener"
           >
             <img src="/line.png" alt="Facebook" />
-          </a>
+          </a> -->
           <a
-            href="https://github.com/code4nara/covid19"
+            href="https://github.com/njc-naru/covid19/tree/study-nara"
             target="_blank"
             rel="noopener"
           >
@@ -82,12 +82,12 @@
   "ja": {
     "Navi Open": "サイドメニュー項目を開く",
     "Navi Close": "サイドメニュー項目を閉じる",
-    "Nara": "奈良県",
+    "Sakura": "桜",
     "COVID-19": "新型コロナウイルス感染症",
     "Measures site": "まとめサイト（非公式）",
-    "Nara Prefecture Government": "奈良県",
+    "Nara Prefecture Government": "国内",
     "Tokyo COVID-19 Task Force": "新型コロナウイルス感染症対策本部",
-    "The latest updates": "県内の最新感染動向",
+    "The latest updates": "国内の最新感染動向",
     "for Families with children": "お子様をお持ちの皆様へ",
     "for Citizens": "県民の皆様へ",
     "for Enterprises and Employees": "企業の皆様・はたらく皆様へ",
@@ -122,43 +122,43 @@ export default {
           link: '/',
           divider: true
         },
-        {
-          icon: 'parent',
-          title: this.$t('for Families with children'),
-          link: '/parent'
-        },
-        {
-          icon: 'mdi-account-multiple',
-          title: this.$t('for Citizens'),
-          link: 'http://www.pref.nara.jp/#000'
-        },
-        {
-          icon: 'mdi-domain',
-          title: this.$t('for Enterprises and Employees'),
-          link: '/worker',
-          divider: true
-        },
-        {
-          title: this.$t('Official statements from Task Force'),
-          link: 'http://www.pref.nara.jp/item/222948.htm'
-        },
+        // {
+        //   icon: 'parent',
+        //   title: this.$t('for Families with children'),
+        //   link: '/parent'
+        // },
+        // {
+        //   icon: 'mdi-account-multiple',
+        //   title: this.$t('for Citizens'),
+        //   link: 'http://www.pref.nara.jp/#000'
+        // },
+        // {
+        //   icon: 'mdi-domain',
+        //   title: this.$t('for Enterprises and Employees'),
+        //   link: '/worker',
+        //   divider: true
+        // },
+        // {
+        //   title: this.$t('Official statements from Task Force'),
+        //   link: 'http://www.pref.nara.jp/item/222948.htm'
+        // },
         {
           title: this.$t('About us'),
           link: '/about'
-        },
-        {
-          title: this.$t('Government official website'),
-          link: 'http://www.pref.nara.jp/',
-          divider: true
-        },
-        {
-          title: this.$t('Municipalities'),
-          link: '/municipalities'
-        },
-        {
-          title: this.$t('Other local Government'),
-          link:
-            'https://github.com/tokyo-metropolitan-gov/covid19/blob/development/forkedSites.md#readme'
+          // },
+          // {
+          //   title: this.$t('Government official website'),
+          //   link: 'http://www.pref.nara.jp/',
+          //   divider: true
+          // },
+          // {
+          //   title: this.$t('Municipalities'),
+          //   link: '/municipalities'
+          // },
+          // {
+          //   title: this.$t('Other local Government'),
+          //   link:
+          //     'https://github.com/tokyo-metropolitan-gov/covid19/blob/development/forkedSites.md#readme'
         }
       ]
     },
