@@ -38,7 +38,7 @@ export default (data: DataType[]) => {
   data.forEach(d => {
     const TableRow: TableDataType = {
       日付: dayjs(d['確定日']).format('MM/DD') ?? '不明',
-      ステータス: d['ステータス'] ?? '不明',
+      ステータス: d['ステータス'] ?? '',
       受診都道府県: d['受診都道府県'] ?? '不明',
       '年代・性別': d['年代・性別'] ?? '不明',
       備考: d['備考'] ?? '不明'

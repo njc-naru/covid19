@@ -26,7 +26,7 @@
           :chart-data="patientsGraph"
           :date="Data.patients.date"
           :unit="'人'"
-          :url="'http://www.pref.nara.jp/1652.htm'"
+          :url="'https://gis.jag-japan.com/covid19jp/'"
         />
       </v-col>
 
@@ -38,7 +38,7 @@
           :chart-option="{}"
           :date="Data.patients.date"
           :info="sumInfoOfPatients"
-          :url="'http://www.pref.nara.jp/1652.htm'"
+          :url="'https://gis.jag-japan.com/covid19jp/'"
         />
       </v-col>
       <!--
@@ -83,14 +83,15 @@
 
 <script>
 import PageHeader from '@/components/PageHeader.vue'
-import TimeBarChart from '@/components/TimeBarChart.vue'
+// import TimeBarChart from '@/components/TimeBarChart.vue'
+import TimeBarChart from '@/components/TimeBarChartAll.vue'
 // import MetroBarChart from '@/components/MetroBarChart.vue'
 // import TimeStackedBarChart from '@/components/TimeStackedBarChart.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
 // import StaticInfo from '@/components/StaticInfo.vue'
 import Data from '@/data/data.json'
 // import MetroData from '@/data/metro.json'
-import DataTable from '@/components/DataTable.vue'
+import DataTable from '@/components/DataTableAll.vue'
 import formatGraph from '@/utils/formatGraph'
 // ßimport formatTable from '@/utils/formatTable'
 import formatTableAll from '@/utils/formatTableAll'
@@ -166,7 +167,7 @@ export default {
       sumInfoOfPatients,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
-        title: '奈良県内の最新感染動向',
+        title: '国内の最新感染動向',
         date: Data.lastUpdate
       },
       newsItems: News.newsItems,
@@ -228,7 +229,7 @@ export default {
   },
   head() {
     return {
-      title: '県内の最新感染動向'
+      title: '国内の最新感染動向'
     }
   }
 }
