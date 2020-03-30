@@ -92,7 +92,8 @@ import Data from '@/data/data.json'
 // import MetroData from '@/data/metro.json'
 import DataTable from '@/components/DataTable.vue'
 import formatGraph from '@/utils/formatGraph'
-import formatTable from '@/utils/formatTable'
+// ßimport formatTable from '@/utils/formatTable'
+import formatTableAll from '@/utils/formatTableAll'
 // import formatConfirmedCases from '@/utils/formatConfirmedCases'
 import News from '@/data/news.json'
 // import SvgCard from '@/components/SvgCard.vue'
@@ -114,7 +115,7 @@ export default {
     // 感染者数グラフ
     const patientsGraph = formatGraph(Data.patients_summary.data)
     // 感染者数
-    const patientsTable = formatTable(Data.patients.data)
+    const patientsTable = formatTableAll(Data.patients.data)
     // 退院者グラフ
     // const dischargesGraph = formatGraph(Data.discharges_summary.data)
 
@@ -129,10 +130,10 @@ export default {
     //   Data.inspections_summary.data['県内'],
     //   Data.inspections_summary.data['その他']
     // ]
-    const inspectionsItems = [
-      '県内発生（疑い例・接触者調査）',
-      'その他（チャーター便・クルーズ便）'
-    ]
+    // const inspectionsItems = [
+    //   '県内発生（疑い例・接触者調査）',
+    //   'その他（チャーター便・クルーズ便）'
+    // ]
     // const inspectionsLabels = Data.inspections_summary.labels
     // 死亡者数
     // #MEMO: 今後使う可能性あるので一時コメントアウト
@@ -205,21 +206,21 @@ export default {
               }
             }
           ]
-        },
-        tooltips: {
-          displayColors: false,
-          callbacks: {
-            title(tooltipItems, _) {
-              const label = tooltipItems[0].label
-              return `期間: ${label}`
-            },
-            label(tooltipItem, data) {
-              const currentData = data.datasets[tooltipItem.datasetIndex]
-              const percentage = `${currentData.data[tooltipItem.index]}%`
+          // },
+          // tooltips: {
+          //   displayColors: false,
+          //   callbacks: {
+          //     title(tooltipItems, _) {
+          //       const label = tooltipItems[0].label
+          //       return `期間: ${label}`
+          //     },
+          //     label(tooltipItem, data) {
+          //       const currentData = data.datasets[tooltipItem.datasetIndex]
+          //       const percentage = `${currentData.data[tooltipItem.index]}%`
 
-              return `${metroGraph.base_period}の利用者数との相対値: ${percentage}`
-            }
-          }
+          //       return `${metroGraph.base_period}の利用者数との相対値: ${percentage}`
+          //     }
+          //   }
         }
       }
     }

@@ -84,15 +84,15 @@ function readPatients() : array
 {
   $excelDir = __DIR__.'/downloads/patients.xlsx';
   $sheetName = 'Table 1';
-  $data = xlsxToArray($excelDir, $sheetName, 'A3:H1013', 'A2:H2');
+  $data = xlsxToArray($excelDir, $sheetName, 'A3:H2013', 'A2:H2');
   return [
     'date' => xlsxToArray($excelDir, $sheetName, 'G1')[0][0], // データ更新日
     'data' => $data->filter(function ($row) {
-      return $row['発表日'];
+      return $row['確定日'];
     })->map(function ($row) {
-      $date = formatDate($row['発表日']);
+      $date = formatDate($row['確定日']);
       $carbon = Carbon::parse($date);
-      $row['発表日'] = $carbon->format('Y-m-d').'T08:00:00.000Z';
+      $row['確定日'] = $carbon->format('Y-m-d').'T08:00:00.000Z';
       $row['date'] = $carbon->format('Y-m-d');
       $row['w'] = $carbon->format('w');
       $row['short_date'] = $carbon->format('m/d');
@@ -114,7 +114,7 @@ function createSummary(array $patients) {
         '日付' => $key,
         '小計' => $val
       ];
-    })->merge($patients['data']->groupBy('発表日')->map(function ($group, $key) {
+    })->merge($patients['data']->groupBy('確定日')->map(function ($group, $key) {
       return [
         '日付' => $key,
         '小計' => $group->count()
