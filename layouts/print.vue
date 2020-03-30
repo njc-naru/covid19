@@ -1,7 +1,7 @@
 <template>
   <v-app class="app-print">
     <div v-if="loading" class="loader">
-      <img src="/logo.png" alt="奈良県" />
+      <img src="/logo.jpg" alt="桜" />
       <scale-loader color="#A83945" />
     </div>
     <v-container v-else>
@@ -9,7 +9,7 @@
         <v-col :cols="12" :sm="6">
           <div class="PrintMeta-HeadingWrapper">
             <div class="PrintMeta-Logo">
-              <img src="/logo.png" alt="奈良県" />
+              <img src="/logo.jpg" alt="桜" />
             </div>
             <h1 class="PrintMeta-Heading">
               新型コロナウイルス感染症<br />まとめサイト（非公式）
@@ -32,7 +32,7 @@
                 ※最新の情報はWebページをご覧ください
               </p>
               <p class="PrintMeta-Link">
-                https://stopcovid19.code4nara.org/
+                https://soy-loft-study.netlify.com/
               </p>
             </v-card>
           </v-card>
